@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import SelectColor from './components/SelectColor';
+import { AppState } from './AppState';
+import { Provider, inject, observer } from 'mobx-react';
+import { Line } from 'react-chartjs-2';
+import { toJS } from 'mobx';
 
-const App: React.FC = () => {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+@observer
+export class App extends Component<any> {
+
+    store = new AppState();
+
+    render() {
+        return (
+            <Provider store={this.store}>
+                <div style={{ position: "relative", width: 600, height: 550 }}>
+
+                    <SelectColor />
+                    <Line
+                        options={{
+                            responsive: true
+                        }}
+                        data={toJS(this.store.getData)}
+                    />
+
+                </div>
+            </Provider>
+        );
+    }
 }
 
 export default App;
