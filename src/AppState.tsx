@@ -119,7 +119,7 @@ export class AppState {
             datasets: [
                 {
                     label: "Dataset 1",
-                    backgroundColor: this.selectedColor,
+                    backgroundColor: "rgba(122, 122, 122, 0.25)",
                     borderColor: this.selectedColor,
                     data: [{
                         x: 0,
