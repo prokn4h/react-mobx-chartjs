@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/react-mobx-chartjs/static/js/main.6a2d2097.chunk.js",
-    "main.js.map": "/react-mobx-chartjs/static/js/main.6a2d2097.chunk.js.map",
+    "main.js": "/react-mobx-chartjs/static/js/main.e48ddefc.chunk.js",
+    "main.js.map": "/react-mobx-chartjs/static/js/main.e48ddefc.chunk.js.map",
     "runtime~main.js": "/react-mobx-chartjs/static/js/runtime~main.a7e317c0.js",
     "runtime~main.js.map": "/react-mobx-chartjs/static/js/runtime~main.a7e317c0.js.map",
     "static/js/2.82773b0e.chunk.js": "/react-mobx-chartjs/static/js/2.82773b0e.chunk.js",
     "static/js/2.82773b0e.chunk.js.map": "/react-mobx-chartjs/static/js/2.82773b0e.chunk.js.map",
     "index.html": "/react-mobx-chartjs/index.html",
-    "precache-manifest.e6d4fc21d0006b77dda1455123670332.js": "/react-mobx-chartjs/precache-manifest.e6d4fc21d0006b77dda1455123670332.js",
+    "precache-manifest.26a8b8da0e38bc71423598c16f037a69.js": "/react-mobx-chartjs/precache-manifest.26a8b8da0e38bc71423598c16f037a69.js",
     "service-worker.js": "/react-mobx-chartjs/service-worker.js"
   }
 }

@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4d226cdd8fb4d548387f003872666d4c",
+    "revision": "39e401c10a13061ba0eb74086458139b",
     "url": "/react-mobx-chartjs/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-mobx-chartjs/static/js/2.82773b0e.chunk.js"
   },
   {
-    "revision": "d6d9515ec81abe12b5bb",
-    "url": "/react-mobx-chartjs/static/js/main.6a2d2097.chunk.js"
+    "revision": "0955af1997111b83cfe8",
+    "url": "/react-mobx-chartjs/static/js/main.e48ddefc.chunk.js"
   },
   {
     "revision": "81710fb144b3304e8a7b",
