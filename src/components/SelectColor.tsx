@@ -7,7 +7,6 @@ import { AppState } from '../AppState';
 class SelectColor extends Component<{ store?: AppState }> {
     onChange = (e: ChangeEvent<HTMLSelectElement>) => {
         this.props.store!.selectColor(e.target.value);
-        //debugger;
     }
 
     options =
