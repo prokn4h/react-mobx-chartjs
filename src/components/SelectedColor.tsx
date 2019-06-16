@@ -4,7 +4,7 @@ import { AppState } from '../AppState';
 
 @inject("store")
 @observer
-class SelectedName extends Component<{ store?: AppState }> {
+class SelectedColor extends Component<{ store?: AppState }> {
     render() {
         return (
             <p>Selected {this.props.store!.selectedColor}</p>
@@ -13,4 +13,4 @@ class SelectedName extends Component<{ store?: AppState }> {
 }
 
 
-export default SelectedName;
+export default SelectedColor;

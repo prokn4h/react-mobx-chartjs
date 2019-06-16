@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import SelectColor from './components/SelectColor';
 import { AppState } from './AppState';
-import { Provider, inject, observer } from 'mobx-react';
-import { Line } from 'react-chartjs-2';
-import { toJS } from 'mobx';
+import { Provider, observer } from 'mobx-react';
+import Chart from './components/Chart'
+import SelectColor from './components/SelectColor';
 
 @observer
 export class App extends Component<any> {
@@ -14,15 +13,8 @@ export class App extends Component<any> {
         return (
             <Provider store={this.store}>
                 <div style={{ position: "relative", width: 600, height: 550 }}>
-
-                    <SelectColor />
-                    <Line
-                        options={{
-                            responsive: true
-                        }}
-                        data={toJS(this.store.getData)}
-                    />
-
+                    {/* <SelectColor /> */}
+                    <Chart />
                 </div>
             </Provider>
         );

@@ -1,4 +1,5 @@
 {
+  "homepage": "https://prokn4h.github.io/react-mobx-chartjs",
   "name": "react-chart",
   "version": "0.1.0",
   "private": true,
@@ -8,6 +9,9 @@
     "@types/react": "16.8.20",
     "@types/react-dom": "16.8.4",
     "chart.js": "^2.8.0",
+    "chartjs-plugin-annotation": "^0.5.7",
+    "chartjs-plugin-draggable": "^0.1.6",
+    "gh-pages": "^2.0.1",
     "mobx": "^5.10.1",
     "mobx-react": "^6.0.3",
     "react": "^16.8.6",
@@ -35,6 +39,10 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
-    ]
+    ],
+    "scripts":{
+      "predeploy": "npm run build",
+      "deploy": "gh-pages -d build"
+    }
   }
 }
