@@ -1,14 +1,7 @@
 import { observable, action, computed } from "mobx";
 
 export class AppState {
-    @observable
-    colors = [
-        "rgba(55, 55, 55, 0.75)",
-        "rgba(155, 155, 0, 0.75)",
-        "rgba(0, 66, 55, 0.75)"
-    ];
-
-    @observable
+    
     selectedColor = "rgba(55, 55, 55, 0.75)";
 
     @observable
@@ -34,11 +27,6 @@ export class AppState {
         }
     }
 
-    @action
-    selectColor = (color: string) => {
-        this.selectedColor = color;
-    }
-
     annotationKey = 1;
 
     @computed
@@ -56,7 +44,6 @@ export class AppState {
                     position: 'bottom',
                     type: 'linear',
                     gridLines: {
-                        //zeroLineColor: "rgba(0,255,0,1)"
                     },
                     scaleLabel: {
                         display: true,
@@ -70,7 +57,6 @@ export class AppState {
                 yAxes: [{
                     position: 'left',
                     gridLines: {
-                        //zeroLineColor: "rgba(0,255,0,1)"
                     },
                     scaleLabel: {
                         display: true,
@@ -89,6 +75,7 @@ export class AppState {
                 annotations: [
                     {
                         drawTime: "afterDatasetsDraw",
+                        // Have to assign new id every time annotation property changes, otherwise mobx event doesn't trigger
                         id: key1,
                         type: "line",
                         mode: "vertical",
@@ -104,18 +91,16 @@ export class AppState {
                             position: 'bottom'
                         },
                         onClick: function (e: React.FormEvent<HTMLInputElement>) {
-                            //console.log("Annotation", e.type, this);
                         },
-                        onDrag: function (event: any) {
-                            //console.log(event);                                            
+                        onDrag: function (event: any) {                                      
                         },
                         onDragEnd: (event: any) => {
                             let value = event.subject.element.options.value;
                             this.addToHistory(value, this.history[this.history.length - 1].x2);
-                            //console.log(toJS(this.history));
                         }
                     }, {
                         drawTime: "afterDatasetsDraw",
+                        // Have to assign new id every time annotation property changes, otherwise mobx event doesn't trigger
                         id: key2,
                         type: "line",
                         mode: "vertical",
@@ -131,15 +116,14 @@ export class AppState {
                             position: 'bottom'
                         },
                         onClick: function (e: React.FormEvent<HTMLInputElement>) {
-                            //console.log("Annotation", e.type, this);
+
                         },
                         onDrag: function (e: React.FormEvent<HTMLInputElement>) {
-                            //console.log(e.subject.config.value);
+
                         },
                         onDragEnd: (event: any) => {
                             let value = event.subject.element.options.value;
                             this.addToHistory(this.history[this.history.length - 1].x1, value);
-                            //console.log(toJS(this.history));
                         }
                     }
                 ]
@@ -225,11 +209,3 @@ export class AppState {
         }
     }
 }
-
-// decorate(AppState, {
-//     colors: observable,
-//     selectedColor: observable,
-//     selectColor: action,
-//     getData: computed,
-//     //getChartOptions: computed
-// });
